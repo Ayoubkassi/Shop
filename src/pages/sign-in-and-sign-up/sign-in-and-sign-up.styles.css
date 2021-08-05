@@ -3,13 +3,12 @@
   display: flex;
   justify-content: space-between;
   margin: 10px auto;
-  align-items: start;
   flex-wrap: wrap;
 }
 
 @media(max-width : 900px){
   .sign-in-and-sign-up {
     flex-direction: column;
-    
+
   }
 }
