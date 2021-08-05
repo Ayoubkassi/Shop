@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { auth , createUserProfileDocument } from './firebase';
-import './App.css';
+//import './App.css';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 
@@ -12,6 +12,8 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import Header from './components/header/header.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
+import { GlobalStyle } from './global.styles';
+
 
 
 class App extends React.Component {
@@ -56,6 +58,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
@@ -63,6 +66,7 @@ class App extends React.Component {
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={()=> this.props.currentUser ? (<Redirect to='/' />) : <SignInAndSignUpPage /> } />
         </Switch>
+        <GlobalStyle />
       </div>
     );
   }
