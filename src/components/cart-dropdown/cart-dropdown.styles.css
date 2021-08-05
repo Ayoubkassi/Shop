@@ -22,6 +22,11 @@
   scrollbar-width: none;
 }
 
+.cart-dropdown .cart-items .empty-message{
+  font-size: 18px;
+  margin: 50px auto;
+}
+
 .cart-dropdown button {
   margin-top: auto;
 }
