@@ -24,6 +24,7 @@ export const GoogleSignIn = () =>firebase.auth().signInWithPopup(provider)
 //our firestore
 
 const db = firebase.firestore();
+export const firestore = firebase.firestore();
 
 export const createUserProfileDocument = async(userAuth, additionalData)=>{
   if(!userAuth) return;
@@ -64,3 +65,21 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   return await batch.commit();
 
 };
+
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollections = collections.docs.map(doc => {
+    const {title , items} = doc.data();
+
+    return {
+        routeName : encodeURI(title.toLowerCase()),
+        id : doc.id,
+        title,
+        items
+    };
+  });
+
+  return transformedCollections.reduce((accumulator,collection)=>{
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
+  },{});
+}
