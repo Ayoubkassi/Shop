@@ -38,3 +38,15 @@
   margin-left: auto;
   margin-top: 50px;
 }
+
+
+
+@media screen and (max-width : 800px){
+  .checkout-page{
+    width : 90%;
+  }
+  .checkout-page .total {
+    
+      font-size: 27px;
+    }
+}
