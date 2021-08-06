@@ -4,7 +4,7 @@
   margin-bottom: 30px;
 }
 
-.collection-preview.title {
+.collection-preview .title {
   font-size: 28px;
   margin-bottom: 25px;
 }
@@ -13,3 +13,18 @@
     display: flex;
     justify-content: space-between;
   }
+
+
+@media screen and  (max-width : 800px){
+  .collection-preview{
+  align-items: center;
+  width: 100%;
+
+}
+
+.collection-preview .preview{
+  display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-gap: 15px;
+}
+}

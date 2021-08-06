@@ -27,3 +27,23 @@
   padding: 10px 15px;
   cursor: pointer;
 }
+
+
+@media(max-width : 800px) {
+.header{
+  height: 60px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.header .logo-container {
+  width: 45px;
+  padding: 0;
+}
+
+.header .options {
+  width: 90%;
+}
+
+
+}

@@ -17,3 +17,13 @@
 .collection-page .items.collection-item{
   margin-bottom: 30px;
 }
+
+@media(max-width : 800px){
+  .collection-page{
+    margin-left:20px;
+  }
+  .collection-page .items{
+    grid-template-columns: repeat(2,1fr)!important;
+
+  }
+}

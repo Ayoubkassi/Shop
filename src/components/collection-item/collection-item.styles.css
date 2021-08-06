@@ -48,3 +48,15 @@
 .collection-item .collection-footer .price {
     width: 10%;
   }
+
+  @media screen and (max-width : 800px){
+    .collection-item{
+      width: 42vw;
+    }
+    .collection-item .custom-button{
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0 10px;
+    }
+  }
