@@ -2,6 +2,8 @@ Hey Hey And Welcome Again This is a Web App using react , i've been trying to cr
 
 ![alt Home](./images/Screenshot.png)
 
+Technology : React , Redux , Firebase , Stripe , Redux-Saga , GraphQL , Express , Ezyme.
+
 This is App Link : [Link to Application](https://ensakshop.herokuapp.com/)
 
 
